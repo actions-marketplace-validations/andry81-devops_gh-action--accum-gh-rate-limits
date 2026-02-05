@@ -94,6 +94,9 @@ All tutorials: https://github.com/andry81/index#tutorials
   > The actual hash of the commit can not be know on the moment of the commit. So instead of the commit hash, an approximate date of the commit is used (~ +5 min ahead) in format of:
   > `https://github.com/{{REPO_OWNER}}/{{REPO}}--gh-stats/commits?branch={{BRANCH}}&time_zone=utc&until=YYYY-MM-DD`
 
+* `CHANGELOG_FILE_LR=<%-encoded string>`:
+  Adds characters to each line end of changelog output file (last LF can be omitted).
+
 # USAGE
 
 > [!WARNING]
@@ -154,6 +157,7 @@ jobs:
             ENABLE_GITHUB_ACTIONS_RUN_URL_PRINT_TO_CHANGELOG=1
             ENABLE_REPO_STATS_COMMITS_URL_PRINT_TO_CHANGELOG=1
           #  CHANGELOG_FILE=changelog.txt
+          #  CHANGELOG_FILE_LR=%0D
 ```
 
 > <!NOTE]
